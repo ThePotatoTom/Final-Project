@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header, section, footer, aside, nav, article {
+    display: block;
+}
+
+body {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
+#bigWrapper {
+    border: 4px solid #000000;
+    max-width: 1000px;
+    margin: 20px 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-flex:1;
+}
+#topWrapper {
+    background: -webkit-linear-gradient(top, #c0ff9f, cyan);
+    border: 2px solid #000499;
+    padding: 20px;
+    text-align: center;
+    font: bold 15px Broadway;
+
+
+}
+#topMenu {
+    border: 2px solid #000499;
+    background-color: #c0ff9f;
+}
+#topMenu li {
+    display: inline-block;
+    list-style: none;
+    padding:5px;
+    font: bold 20px Broadway;
+
+}
+#flexDiv {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+
+}
+#mainSection {
+    border: 2px solid #000499;
+    background: -webkit-linear-gradient(top, #c0ff9f, cyan);
+    -webkit-box-flex:1;
+    margin: 20px;
+    padding: 20px;
+    -webkit-box-ordinal-group: 2;
+    -webkit-box-flex:100;}
+#sideNews {
+    border: 2px solid #000499;
+    margin: 20px 0px;
+    padding: 30px;
+    background: -webkit-linear-gradient(top, #c0ff9f, cyan);
+    -webkit-box-ordinal-group: 1;
+    -webkit-box-flex:2;}
+#pageFooter {
+    text-align: center;
+    padding: 10px;
+    border-top: 4px solid #000000;
+    background: -webkit-linear-gradient(top, #c0ff9f, cyan);
+
+

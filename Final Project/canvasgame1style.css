@@ -1,4 +1,13 @@
 #pong {
     border: 1px ridge black;
-
+    text-align: center;
+}
+#button {
+    display: block;
+    margin: 200px auto;
+    color: black;
+    background: aquamarine;
+    width: 80px;
+    height: 50px;
+    font-size: 20px;
 }
