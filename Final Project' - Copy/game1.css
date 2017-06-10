@@ -1,0 +1,19 @@
+#pong {
+   border: 1px ridge black;
+   text-align: center;
+}
+
+
+ 
+li {
+   display: inline-block;
+   list-style: none;
+   padding:5px;
+   font: bold 20px Broadway;
+   border: 1px ridge cyan;
+   background: -webkit-linear-gradient(top, lightgreen, blue);
+   text-align: center;
+   margin: 10px auto;
+}
+#li1:hover {
+   -webkit-transform: scale(1.2);

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Emma Pacelli</title>
+   <link rel = "stylesheet" href = "finalwebsite.css"/>
+</head>
+<body>
+<div id = "bigWrapper">
+   <header id = "topWrapper">
+       <h1>Tommy and Emma's Final Project</h1>
+   </header>
+   <nav id = "topMenu">
+ 
+       <ul>
+           <li id = "li1"><a href="game1.html">Pong</a></li>
+           <li id = "li2"><a href="game2.html">Puzzle</a></li>
+		   </br>
+       </ul>
+   </nav>
+   <div id = "flexDiv">
+       <section id = "mainSection">
+ 
+           <article>
+               <header>
+                   <h1>Pong Game </h1>
+               </header>
+               <p class="pink">We created a pong game by  using the canvas tag to create a black for our game to take place in. In order for our game to work, I created the canvas with the size of 700px width and 500px height. The game starts off with panel 1 (p1y) and panel 2 (p2y) both having a height of 100px, a thickness of 10px, and starting with a padding of 40px from the top of the canvas. The “ball” we use is a 5px by 5px square, which starts with a 50px padding. Both scores start at 0 (score1=score2=0). The difficulty of the game can be somewhat changed by modifying the AI’s speed, which is standardly set at ais=3.5, but if you change the coding higher or lower the difficulty of the AI will in turn change. I used window.onload=function() in order to start the event when the page is initially loaded. Within this function is c.addEventListener(‘mousemove’,function(e){p1y=e.clientY-ph.2;});, which allows the user’s mouse to control the left side panel by making the panel’s center of mass follow the cursor in the Y direction, only up and down. The way the game is played is that the ball is to be bounced from panel to panel until either side misses the ball, and lets it hit the edge of their side of the canvas, resulting in tallying one point for the winner side and resetting the function, by using function reset(){...}. Inside the brackets, the ellipses represent the code that resets the ball’s velocity to 3, and moves the ball back to its central location in the canvas, where it is again launched at the winners side. In order to code the AI, I used the code, under the function update(){ tag, if(p2y+ph/2<by){p2y+=ais} else {p2y-=ais;}, which makes the AI move up or down depending on the location of the ball in accordance to the panels center of mass.This game is 
+               </p>
+ 
+               <footer>
+                   <p class="blue"> </p>
+               </footer>
+           </article>
+           <article>
+               <header>
+                   <h1>Puzzle Game</h1>
+               </header>
+               <p class="pink"> I began by first making a constant of difficulty, which is set at 4, using “const PUZZLE_DIFFICULTY = 4;”.This value is what determines the size of the puzzle board, using the number of squares for height and width.The rows and columns always match, so by setting puzzle difficulty  to 4 we get 16 puzzle pieces in total. Various variables were set in the start in order to get the layout of the coding components of the puzzle including puzzle width and puzzle height. After the puzzle values and variables were set, I set up a canvas. I set the width and height of the canvas to match the size of our trimmed image, followed by applying some simple styles to create a border around our canvas to display the bounds of the puzzle. With all of that I was able to create some simple instructions including “Click Puzzle to Begin” by making the createTitle() function. At this point I created the empty piece object and the position functions which allow the pieces to move and replace each other. Finally, the codes stops executing and waits for the user to interact. I set a click reactor to the document to fire the shufflePuzzle() function when triggered, which will begin the game. For the fundamentals of the puzzle matching game I made it so if a piece of the puzzle was clicked and dragged, and then dropped in a position greater than the original positions max height, then the piece would be moved up, using “if(xPos >= _puzzleWidth){xPos = 0;yPos += _pieceHeight; }}”. I used a very similar line of code to move the piece down, left, or right based on the position it was moved to in relation to the original location. Once each game is started, the puzzle pieces are randomly scattered using “_pieces = shuffleArray(_pieces);” so that each game is a unique experience and a different challenge for the user. Now, in order for the puzzle to really work, there needs to be an onPuzzleClick() function. Once the code detects a click, it uses e.layerX and e.layerY in order to determine which piece was clicked and where it was located. Once an image is clicked, the code “_stage.drawImage(_img, _currentPiece.sx,_currentPiece.sy,_pieceWidth,_pieceHeight, _mouse.x - (_pieceWidth / 2), _mouse.y - (_pieceHeight / 2), _pieceWidth, _pieceHeight);” is used to place the image in the center of the cursor. Once a piece is dropped, the image residing in the location of dropping gets sent to the original location of the dragged image.Once the mouse click is release, the image needs to be redrawn, “_stage.save();_stage.globalAlpha=.6;_stage.drawImage(_img,_currentPiece.sx,_currentPiece.sy,_pieceWidth,_pieceHeight,_mouse.x-(_pieceWidth/2),_mouse.y-(_pieceHeight/2),_pieceWidth,_pieceHeight);_stage.restore();_stage.strokeRect( _mouse.x - (_pieceWidth / 2), _mouse.y - (_pieceHeight / 2), _pieceWidth,_pieceHeight);”. Lastly, once all pieces are connected the puzzle must be reset, using the code “function gameOver(){document.onmousedown = null;document.onmousemove = null;document.onmouseup = null;initPuzzle();}.
+</p>
+               <footer>
+                   <p class="blue"></p>
+               </footer>
+           </article>
+           <article>
+               <header>
+                   <h1>About the Makers</h1>
+               </header>
+               <p class="pink">The creators of this project are Tommy Gitre and Emma Pacelli, both Juniors at Torrey Pines High School. Tommy is a 17 year old boy with blonde hair and green eyes. He has two sisters and a small dog. He has a 4.2 GPA and has been a member of ASB for 4 years. Tommy works at Crust Pizzeria and enjoys hanging with friends in his free time. Tommy has had no previous programming experience before this year and was in charge of creating both games for our project.</br>
+Emma is a 17 year old girl with two sisters and one brother.She plays varsity soccer and beach volleyball for the school as well as competitively. Emma has a 4.3 GPA and her favorite subject is math. Emma has also had no previous programming experience and was responsible for creating the website outline and links for the Final Project.<br>
+Emma and Tommy have learned a lot through labs and lessons assigned throughout this semester and feel comfotable programming with HTML, CSS, and Java using intelliJ. </p>
+               <footer>
+                   <p class="blue"></p>
+               </footer>
+           </article>
+       </section>
+   </div>
+   <footer id= "pageFooter">
+       Copyright Tommy Gitre/Emma Pacelli 2017
+   </footer>
+</div></body>
+</html>
